@@ -27,3 +27,22 @@ python -m pytest tests/ -q
 Hover any component to see what it is and why it is needed.
 
 ![Before / After architecture](docs/before-after-elaborated.svg)
+<details>
+<summary><b>Feature engineering + backtest — click to expand the 4 steps</b></summary>
+
+Collapsed, this is just: Feature engineering -> Train -> Backtest 90 days -> Score next 30 days
+
+1. Lag demand, rolling means and seasonality are built only from past data, so there is no leakage.
+2. A transparent baseline and seasonal model is trained, so the method can be explained.
+3. Backtest: the last 90 days are held out and scored with MAE, so accuracy is measured honestly.
+4. Scores forecast the next 30 days by part and region, with a plain-English driver summary.
+</details>
+
+### Earlier issues, risk, and impact after
+
+| Aspect | Detail |
+|---|---|
+| Earlier issues | Forecasts kept in spreadsheets and gut feel, hard to repeat or check; historical data dumped by hand, stale before it is used; features built once by hand, so they drift and cannot be reused; no held-out backtest; a model built once with no scoring entry point, so it never reached the team; no driver summary, so teams could not tell why a forecast moved. |
+| Risk | A model could look good by accidentally using future data; a forecast nobody could check or repeat could drive a real planning decision; features could drift silently. |
+| Impact after | Forecasts start from curated lakehouse data; features use only past data, so no leakage; the last 90 days are held out and scored with MAE; every forecast ships with a plain-English driver summary and reaches dashboards and planning teams. |
+
