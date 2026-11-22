@@ -1,4 +1,4 @@
-# Parts and Service Demand Forecasting
+# Demand Forecasting with ML
 
 Portfolio implementation based on production work experience. All data is synthetic, all code is original and clean-room, and no proprietary code, data, schema names, or internal system details from any employer are included.
 
