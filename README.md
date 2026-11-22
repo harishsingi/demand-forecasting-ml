@@ -17,3 +17,7 @@ python -m pytest tests/ -q
 - Features: lag demand, rolling means, seasonality by month, dealer region mix
 - Backtest: last 90 days held out, MAE reported, no leakage (features use only past data)
 - Output: per part, per region forecast for the next 30 days, with a plain-English driver summary
+
+## Architecture
+
+![ML demand forecasting architecture](docs/ml-demand-forecasting.svg)
