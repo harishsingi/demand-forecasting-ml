@@ -21,3 +21,9 @@ python -m pytest tests/ -q
 ## Architecture
 
 ![ML demand forecasting architecture](docs/ml-demand-forecasting.svg)
+
+### Before / After
+
+Hover any component to see what it is and why it is needed.
+
+![Before / After architecture](docs/before-after-elaborated.svg)
