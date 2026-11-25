@@ -1,0 +1,2 @@
+# Runtime dependencies: none.
+# The pipeline is pure Python 3.10+ standard library.

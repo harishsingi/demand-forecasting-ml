@@ -1,0 +1,21 @@
+{
+  "backtest_days": 90,
+  "days": 540,
+  "forecast_horizon": 30,
+  "min_history_days": 120,
+  "noise_stddev": 10.0,
+  "part_bases": {
+    "battery": 80.0,
+    "brake pad": 100.0,
+    "filter": 160.0
+  },
+  "region_multipliers": {
+    "Central": 0.85,
+    "North": 1.0,
+    "South": 1.15
+  },
+  "rolling_window": 28,
+  "seasonal_amplitude": 0.2,
+  "seed": 7,
+  "start_date": "2023-01-01"
+}

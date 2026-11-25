@@ -1,0 +1,14 @@
+# Generated data and trained models (reproducible from the code)
+data/
+models/
+# Python artefacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Packaging
+*.egg-info/
+build/
+dist/
+# Virtual environments
+.venv/
+venv/

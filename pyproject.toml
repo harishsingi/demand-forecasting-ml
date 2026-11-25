@@ -1,11 +1,20 @@
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
+
 [project]
-name = "parts-service-demand-forecasting"
-version = "0.1.0"
-description = "Parts demand forecasting"
+name = "demand-forecasting-ml"
+version = "0.2.0"
+description = "Transparent demand forecasting baseline: synthetic data, leakage-free features, held-out backtest, explained 30-day forecasts."
 requires-python = ">=3.10"
 dependencies = []
+
 [project.optional-dependencies]
 dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
